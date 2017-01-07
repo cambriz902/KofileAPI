@@ -9,7 +9,6 @@ app.use('/', routes);
 
 app.use(function (err, req, res, next) {
   res.status(404).send('We encountered a problem and are looking into it!')
-  res.status(500).send(req.body)
 });
 
 let server = app.listen(4000, () => {
