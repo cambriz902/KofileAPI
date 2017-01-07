@@ -3,8 +3,8 @@ const orders = require('./orders');
 
 routes.use('/orders', orders);
 
-routes.post('/', (req, res) => {
-  res.status(200).json({ message: 'Connected!' });
+routes.get('/', (req, res) => {
+  res.status(200).json('Connected!');
 });
 
 module.exports = routes;
