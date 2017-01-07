@@ -7,7 +7,7 @@
     "start": "nodemon app.js",
     "part_one": "node ./lib/scripts/challenges/part_one.js",
     "part_two": "node ./lib/scripts/challenges/part_two.js",
-    "test": "./node_modules/.bin/mocha test orders.js"
+    "test": "./node_modules/.bin/mocha tests orders.js"
   },
   "author": "",
   "license": "ISC",
