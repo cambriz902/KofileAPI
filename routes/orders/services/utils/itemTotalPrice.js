@@ -1,9 +1,8 @@
 const fees_and_distributions_data = require('../../../../data/fees.json');
+const findOrderTypeData = require('./findOrderTypeData');
 
 module.exports = (item_type, pages) => {
-  let order_type_data = fees_and_distributions_data.find(data => {
-    return data.order_item_type === item_type
-  });
+  let order_type_data = findOrderTypeData(item_type);
   let fees = order_type_data.fees;
   let number_of_fees = order_type_data.fees.length;
   let total_price = 0.00;

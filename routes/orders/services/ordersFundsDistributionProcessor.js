@@ -1,5 +1,6 @@
 const fees_and_distributions_data = require('../../../data/fees.json');
 const itemTotalPrice = require('./utils/itemTotalPrice');
+const findOrderTypeData = require('./utils/findOrderTypeData');
 
 let all_funds_distribution = {}
 
@@ -13,9 +14,7 @@ function updateFunds(funds_data, distribution_name, distribution_amount) {
 }
 
 function itemFundsDistribution(item_type, item_price, funds_data) {
-  let order_type_data = fees_and_distributions_data.find(data => {
-    return data.order_item_type === item_type
-  });
+  let order_type_data = findOrderTypeData(item_type);
   let distribution_data = order_type_data.distributions;
   let number_of_destributions = distribution_data.length;
   for(let distribution_index = 0; distribution_index < number_of_destributions; distribution_index++){
