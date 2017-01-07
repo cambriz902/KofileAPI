@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "part_one": "node ./lib/scripts/part_one.js",
-    "part_two": "node ./lib/scripts/part_two.js",
+    "part_one": "node ./lib/scripts/challenges/part_one.js",
+    "part_two": "node ./lib/scripts/challenges/part_two.js",
     "test": "./node_modules/.bin/mocha test orders.js"
   },
   "author": "",
