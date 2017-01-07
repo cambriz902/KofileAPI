@@ -1,5 +1,4 @@
 const request = require('supertest');
-const should = require('should');
 
 describe('orders', function () {
   describe('POST /orders/prices', function () {
