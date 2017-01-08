@@ -6,9 +6,9 @@ let all_funds_distribution = {}
 
 function updateFunds(funds_data, distribution_name, distribution_amount) {
   if(funds_data[distribution_name]) {
-    funds_data[distribution_name] = funds_data[distribution_name] + distribution_amount;
+    funds_data[distribution_name] = parseFloat(funds_data[distribution_name] + distribution_amount).toFixed(2);
   } else {
-    funds_data[distribution_name] = distribution_amount;
+    funds_data[distribution_name] = parseFloat(distribution_amount).toFixed(2);
   }
   return funds_data;
 }
@@ -23,7 +23,7 @@ function itemFundsDistribution(item_type, item_price, funds_data) {
     let distribution_amount = parseFloat(curr_distribution.amount);
     funds_data = updateFunds(funds_data, distribution_name, distribution_amount);
     all_funds_distribution = updateFunds(all_funds_distribution, distribution_name, distribution_amount);
-    item_price -= distribution_amount;
+    item_price = (item_price - distribution_amount).toFixed(2);
   }
   if(item_price > 0){
     funds_data = updateFunds(funds_data, "other", item_price);
