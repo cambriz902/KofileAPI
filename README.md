@@ -2,7 +2,7 @@
 
 **Summary**
 
-  There are 3 parts to this repository which corresponds to 3 parts of Kofile's coding challenge. You can read about the 3 parts at [Kofile Challenge info](https://gist.github.com/ericve25/4058b6625fc0976700b88bd0135eb060#file-fees-json). I will breafly go over part 1 and part 2 since they were the trivial parts of this challenge. Part 3 was to me the important part of the challenge. This is because part 3 uses solutions from part 1 and part 2. Part 3 use of part 1 and part 2 shows how I would refactor what is in my opinion bad code from part 1 and part 2. I wanted to leave these first 2 parts the way they were so I could show my ability to refactor code. Talking to Eric it sounded that refactoring code to be better quality is something the team is working on. 
+  There are 3 parts to this repository which corresponds to 3 parts of Kofile's coding challenge. You can read about the 3 parts at [Kofile Challenge](https://gist.github.com/ericve25/4058b6625fc0976700b88bd0135eb060#file-fees-json). I will breafly go over part 1 and part 2 since they were the trivial parts of this challenge. Part 3 was to me the important part of the challenge. This is because part 3 uses solutions from part 1 and part 2. Part 3 use of part 1 and part 2 shows how I would refactor what is in my opinion not the best code from part 1 and part 2. I wanted to leave these first 2 parts the way they are so I could show my ability to refactor code. Talking to Eric it sounded that refactoring code is something the team is working on. 
   
 **Set up**
 
@@ -22,9 +22,9 @@ Files:
 **solution**
 This challenge was pretty straight forward. 
 
-  1. Read orders from a json file and parse the information to assess the data for each order to be processed.
+  1. Read orders from a json file and parse the information to access the data for each order to be processed.
   2. Read a fees json file and parse information to access correct fees data for current order item types.
-  3. Save the information in an object that contained the information to be printed later. 
+  3. Save the information in an object that containes the information to be printed later. 
   ```
   { 
     "order_id": order.order_number,
@@ -56,8 +56,8 @@ Files:
 **solution**
 This challenge was pretty straight forward. 
 
-  1. Read orders from a json file and parse the information to assess the data for each order to be processed.
-  2. Read a fees json file and parse information to access correct fees and distribution data for current order.
+  1. Read orders from a json file and parse the information to access the data for each order to be processed.
+  2. Read a fees json file and parse information to access correct fees and distribution data for order and item type.
   3. Get the total price with the fees data the same way we got it for part 1(function should be extra and re-used).
   4. Use destribution data and total price of an item to calculate the amount of money going into each fund and into
   the 'other' fund.
@@ -102,7 +102,7 @@ Output:
 
 
 **Note**
-I want to re-iterate that part 1 and part 2 code is not the best and I refactored the solution in part 3 to show the actual quality of code I like to write.
+I want to re-iterate that part 1 and part 2 code is not the best and I refactored the solutions in part 3 to show the actual quality of code I like to write.
 
 # Part 3: API
 
@@ -148,7 +148,7 @@ Directories:
 - lib: contains our scripts directory.
 - scripts: contains all the scripts we can run in their respective directories.
 - routes: contains directories of all our specific routes and an index.js file to combine and export our routes
-- orders: contains routes for order requests, index.js to combine and export our routes and services directory 
+- orders: contains routes for order requests and index.js to combine and export our routes and services directory 
 - services:  contains different service objects our routes apis use and utils directory
 - utils: contains functions that are re-usable in our service objects
 - tests: contains all our tests
@@ -158,7 +158,7 @@ files:
 - package.json: manages our dependecies
 
 **Description**
-This api contains 2 end-points, ```/orders/prices``` and ```orders/funds_distribution```. These are both post requests that take data in json format in the body of the request. I added body-parser middleware to my express server to help with pargins the body json data. 
+This api contains 2 end-points, ```/orders/prices``` and ```orders/funds_distribution```. These are both post requests that take data in json format in the body of the request. I added body-parser middleware to my express server to help with parsing the request body. 
 
 # orders/prices Endpoint: 
 
@@ -187,7 +187,7 @@ routes/orders/services/utils/findOrderTypeData.js
     }
   ]
   ```
-  4. If no errors accur, status 200 and data are returns in the response of the request.
+  4. If no errors accurs, return status: 200 and data: prices.
   
 Example Data Response:
 ```
@@ -257,7 +257,7 @@ Example Data Response:
 Automation:
 - Tested that the end-point existed in the test/orders.js file.
 Manual: 
-I use Postman to test my end points
+I use Postman to make post request with data in body and test my api output.
 
 # /prices/funds_distribution Endpoint: 
 
@@ -285,13 +285,13 @@ routes/orders/services/utils/findOrderTypeData.js
     }
   ]
   ```
- I instead have the name be the key and the amount be the value. This made the code faster since I didn't have to look through the array to find the object with the correct name. I just had to look if the key existed in the given object. 
+ I instead have the name be the key and the amount be the value. This made the code faster since I didn't have to iterate the array to find the object with the correct name. I just had to look if the key existed in the given object. 
  ```
  {
     "Recording Fee": 10,
  }
  ```
-  4. If no errors accur, status 200 and data are returned in the response of the request.
+  4. If no errors accur, return status: 200 and data: distribution are returned in the response of the request.
   
 Example Data Response:
 ```
@@ -360,7 +360,7 @@ Example Data Response:
 Automation:
 - Tested that the end-point existed in the test/orders.js file.
 Manual: 
-I use Postman to test my end points
+I use Postman to make post request with data in body and test my api output.
 
 
 # Error-Handling
@@ -375,7 +375,7 @@ I added middleware to my express server to return a status: 404 and 'We encounte
 # test api
 
 1. Start server with: $```npm start```
-2. Use Postman to make POST request to ```localhost:4000/orders/funds_distribution``` and ```localhost:4000/orders/prices``` with correct data(look at data/orders.json file for format to pass in body)
+2. Use Postman to make POST request to ```localhost:4000/orders/funds_distribution``` and ```localhost:4000/orders/prices``` with correct request in body(look at data/orders.json file for format to pass in body)
 
 # Unfinished
 
