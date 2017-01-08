@@ -1,8 +1,8 @@
-# Kofile Challenges
+# Kofile Challenge
 
 **Summary**
 
-  There are 3 parts to this repository which corresponds to 3 parts of Kofile's coding challenge. You can read about the 3 parts at [a link](https://gist.github.com/ericve25/4058b6625fc0976700b88bd0135eb060#file-fees-json). I will breafly go over part 1 and part 2 since they were the trivial parts of this challenge. Part 3 was to me the important part of the challenge. This is because part 3 uses solutions from part 1 and part 2. Part 3 use of part 1 and part 2 shows how I would refactor what is in my opinion bad code from part 1 and part 2. I wanted to leave these first 2 parts the way they were so I could show my ability to refactor code. Talking to Eric it sounded that refactoring code to be better quality is something the team is working on. 
+  There are 3 parts to this repository which corresponds to 3 parts of Kofile's coding challenge. You can read about the 3 parts at [Kofile Challenge info](https://gist.github.com/ericve25/4058b6625fc0976700b88bd0135eb060#file-fees-json). I will breafly go over part 1 and part 2 since they were the trivial parts of this challenge. Part 3 was to me the important part of the challenge. This is because part 3 uses solutions from part 1 and part 2. Part 3 use of part 1 and part 2 shows how I would refactor what is in my opinion bad code from part 1 and part 2. I wanted to leave these first 2 parts the way they were so I could show my ability to refactor code. Talking to Eric it sounded that refactoring code to be better quality is something the team is working on. 
   
 **Set up**
 
