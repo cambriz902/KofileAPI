@@ -205,7 +205,7 @@ Example Data Response:
           "price": "26.00"
         }
       ],
-      "order_total": "28.00"
+      "order_total": "54.00"
     },
     {
       "order_id": "20150117000001",
@@ -219,7 +219,7 @@ Example Data Response:
           "price": "45.00"
         }
       ],
-      "order_total": "27.00"
+      "order_total": "72.00"
     },
     {
       "order_id": "20150118000001",
@@ -233,7 +233,7 @@ Example Data Response:
           "price": "23.00"
         }
       ],
-      "order_total": "30.00"
+      "order_total": "53.00"
     },
     {
       "order_id": "20150123000001",
@@ -247,7 +247,7 @@ Example Data Response:
           "price": "23.00"
         }
       ],
-      "order_total": "23.00"
+      "order_total": "46.00"
     }
   ]
 }
@@ -301,21 +301,21 @@ Example Data Response:
       {
         "order_id": "20150111000001",
         "funds_distribution": {
-          "Recording Fee": "5.00",
-          "Records Management and Preservation Fee": "10.00",
-          "Records Archive Fee": "10.00",
-          "Courthouse Security": "1.00",
+          "Recording Fee": "10.00",
+          "Records Management and Preservation Fee": "20.00",
+          "Records Archive Fee": "20.00",
+          "Courthouse Security": "2.00",
           "other": "2.00"
         }
       },
       {
         "order_id": "20150117000001",
         "funds_distribution": {
-          "Recording Fee": "5.00",
-          "Records Management and Preservation Fee": "10.00",
-          "Records Archive Fee": "10.00",
-          "Courthouse Security": "1.00",
-          "other": "1.00"
+          "Recording Fee": "10.00",
+          "Records Management and Preservation Fee": "20.00",
+          "Records Archive Fee": "20.00",
+          "Courthouse Security": "2.00",
+          "other": "20.00"
         }
       },
       {
@@ -325,7 +325,7 @@ Example Data Response:
           "Records Management and Preservation Fee": "10.00",
           "Records Archive Fee": "10.00",
           "Courthouse Security": "1.00",
-          "other": "4.00",
+          "other": "5.00",
           "County Clerk Fee": "20.00",
           "Vital Statistics Fee": "1.00",
           "Vital Statistics Preservation Fee": "1.00"
@@ -334,22 +334,22 @@ Example Data Response:
       {
         "order_id": "20150123000001",
         "funds_distribution": {
-          "County Clerk Fee": "20.00",
-          "Vital Statistics Fee": "1.00",
-          "Vital Statistics Preservation Fee": "1.00",
-          "other": "1.00"
+          "County Clerk Fee": "40.00",
+          "Vital Statistics Fee": "2.00",
+          "Vital Statistics Preservation Fee": "2.00",
+          "other": "2.00"
         }
       }
     ],
     "total_distribution": {
-      "Recording Fee": "5.00",
-      "Records Management and Preservation Fee": "10.00",
-      "Records Archive Fee": "10.00",
-      "Courthouse Security": "1.00",
-      "other": "2.00",
-      "County Clerk Fee": "20.00",
-      "Vital Statistics Fee": "1.00",
-      "Vital Statistics Preservation Fee": "1.00"
+      "Recording Fee": "50.00",
+      "Records Management and Preservation Fee": "100.00",
+      "Records Archive Fee": "100.00",
+      "Courthouse Security": "10.00",
+      "other": "58.00",
+      "County Clerk Fee": "120.00",
+      "Vital Statistics Fee": "6.00",
+      "Vital Statistics Preservation Fee": "6.00"
     }
   }
 }
