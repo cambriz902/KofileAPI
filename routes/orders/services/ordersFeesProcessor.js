@@ -14,7 +14,7 @@ function orderFees(order) {
     let item = order_items[item_index];
     let item_type = item.type;
     let item_price = itemTotalPrice(item_type, item.pages);
-    total_price = parseFloat(total_price +  item_price).toFixed(2);
+    total_price = (parseFloat(total_price) + parseFloat(item_price)).toFixed(2);
     order_price_info.items_type_price.push({
       "type": item_type,
       "price": parseFloat(item_price).toFixed(2)

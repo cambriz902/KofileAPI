@@ -6,7 +6,7 @@ let all_funds_distribution = {}
 
 function updateFunds(funds_data, distribution_name, distribution_amount) {
   if(funds_data[distribution_name]) {
-    funds_data[distribution_name] = parseFloat(funds_data[distribution_name] + distribution_amount).toFixed(2);
+    funds_data[distribution_name] = (parseFloat(funds_data[distribution_name]) + parseFloat(distribution_amount)).toFixed(2);
   } else {
     funds_data[distribution_name] = parseFloat(distribution_amount).toFixed(2);
   }
