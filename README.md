@@ -385,12 +385,6 @@ This are some of the things I would have liked to add.
   2. Unit tests for utils
   3. More API tests
   4. Better error handling and information.
-  
-
-# Summary
-
-I didn't add everything I wanted to add but i'm satisfied for it being a challenge solution. I would also like to add that this is my first creating a Node.js api. I usually write my apis in Ruby on Rails but I wanted to do it in Node.js because this shows my greatest strength as a developer. I have been programming since I was 16(10+ years). I love what I do, so I have spent time learning why languages/frameworks work the way they work. Learning how the internet works from the time you type something into the url to when it loads the webpage. This allows me to learn new technologies extremely fast and with little to no help. I don't just know how to use a given technology. I know how and why it works. 
-
-I would love to discuss my code and answer any questions you may have. 
+ 
 
 
